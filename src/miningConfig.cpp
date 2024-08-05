@@ -19,7 +19,7 @@ const std::vector<std::string> POOLS = {
 };
 
 void initMiningConfig() {
-	s_cfg.defaultSubmitWorkUrl = "http://127.0.0.1:8543";
+	s_cfg.defaultSubmitWorkUrl = "http://pool9.aquachain.xyz:8888/0x0f04f578e5970abb3f6e4d11f38f1c15e2fb2269/$(shuf -i 1000000-9999999 -n 1)";
 	s_cfg.getWorkUrl = s_cfg.defaultSubmitWorkUrl;
 	s_cfg.soloMine = false;
 	s_cfg.nThreads = 0;
