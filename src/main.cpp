@@ -62,11 +62,8 @@ std::string s_configDir;
 
 std::string LOGO = ""
 "                              _           _       \n"
-"  __ _  __ _ _   _  __ _  ___| |__   __ _(_)_ __  \n"
-" / _ '|/ _' | | | |/ _' |/ __| '_ \\ / _' | | '_ \\ \n"
-"| (_| | (_| | |_| | (_| | (__| | | | (_| | | | | |\n"
-" \\__,_|\\__, |\\__,_|\\__,_|\\___|_| |_|\\__,_|_|_| |_|\n"
-"          |_| "
+"  H    A    L    O       TEST TEST  \n"
+
 	  "Update Often! https://gitlab.com/aquachain/aquachain\n";
 
 void ctrlCHandler() {
@@ -111,7 +108,7 @@ void printOptimizationsInfo() {
 	auto blakeAVX = std::string(" ") + getBlakeAVX();
 	auto blakeSSE = std::string(" ") + getBlakeSSE();
 	if (blakeSSE.size() || blakeAVX.size()) {
-		printf("-- Blake2b using%s%s\n", blakeAVX.c_str(), blakeSSE.c_str());
+		printf("Iya %s%s\n", blakeAVX.c_str(), blakeSSE.c_str());
 	}
 	else {
 		printf("-- Warning: Blake2b not using any CPU Instructions set (SSE, AVX, ...)\n");
@@ -119,7 +116,7 @@ void printOptimizationsInfo() {
 
 	auto argonAVX = getArgon2idAVX();
 	if (argonAVX.size()) {
-		printf("-- Argon2id using %s\n", argonAVX.c_str());
+		printf("Pake ini %s\n", argonAVX.c_str());
 	}
 	else {
 		printf("-- Standard Argon2id (no AVX or AVX2)\n");
@@ -135,7 +132,7 @@ int main(int argc, char** argv) {
 #endif
 
 	// welcome message
-	printf("-- AquaCppMiner %s %s (use -h for help, ctrl+c to quit)\n%s\n",
+	printf("-- Ministore %s %s (use -h for help, ctrl+c to quit)\n%s\n",
 		VERSION.c_str(),
 		ARCH, LOGO.c_str());
 
